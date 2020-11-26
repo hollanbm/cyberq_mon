@@ -31,7 +31,7 @@ var j = schedule.scheduleJob(`*/${interval_mins} * * * *`, function(){
     
             if(food1_temp >= set_food1_temp - 20)
             {
-                sendAlert('Food almost done', `Food1 is ${set_food1_temp -  food1_temp} degrees from being done`);
+                sendAlert('Food almost done', `Food1 is ${(set_food1_temp -  food1_temp).toFixed(1)} degrees from being done`);
             }
         }
     );
