@@ -1,0 +1,14 @@
+version: "3.8"
+services:
+  cyberq_mon:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: cyberq_mon
+    environment:
+     - PUSHOVER_USER=<pushover_user_token>
+     - PUSHOVER_TOKEN=<pushover_token>
+     - SET_COOK_TEMP=250
+     - SET_FOOD1_TEMP=165
+     - INTERVAL_MINS=10
+    restart: unless-stopped
