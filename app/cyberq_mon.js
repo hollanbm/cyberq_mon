@@ -25,10 +25,10 @@ var j = schedule.scheduleJob(`*/${interval_mins} * * * *`, function(){
             var jsonObj = JSON.parse(result);
             var cook_temp = (jsonObj.nutcstatus.COOK_TEMP._text / 10).toFixed(1)
             var food1_temp = (jsonObj.nutcstatus.FOOD1_TEMP._text / 10).toFixed(1)
-            var food2_temp = (jsonObj.nutcstatus.FOOD2TEMP._text / 10).toFixed(1)
+            var food2_temp = (jsonObj.nutcstatus.FOOD2_TEMP._text / 10).toFixed(1)
             console.log(`current cook_temp: ${cook_temp}`)
             console.log(`current food1_temp: ${food1_temp}`)
-            console.log(`current food2_temp: ${food2temp}`)
+            console.log(`current food2_temp: ${food2_temp}`)
 
 
             sendAlert('Temp Alert', `The grill temperature is ${cook_temp}`);
